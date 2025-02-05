@@ -1,5 +1,5 @@
 from django.db import models
-from api_auth.models import *
+from api_permission.models import *
 from django.contrib.auth.models import User
 
 # Create your models here.
