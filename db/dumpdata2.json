@@ -1,1 +1,1200 @@
-[{"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "api_control", "model": "log"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "api_room", "model": "room"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "api_room", "model": "iotobject"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "api_room", "model": "department"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "api_permission", "model": "actoruser"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "api_permission", "model": "admin"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "api_permission", "model": "common"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "api_permission", "model": "coordinator"}}, {"model": "contenttypes.contenttype", "pk": 15, "fields": {"app_label": "api_permission", "model": "service"}}, {"model": "sessions.session", "pk": "lvej53bkab43yz36fxveevq56loodon4", "fields": {"session_data": ".eJxVjMsOwiAQRf-FtSFDeZS6dO83kGEYpGogKe3K-O_apAvd3nPOfYmA21rC1nkJcxJnocTpd4tID647SHestyap1XWZo9wVedAury3x83K4fwcFe_nWmJPG7LMyFvVkcNJGe0eeYaABPCjIjAY8qQw5kgaOJtJIHJ11ozXi_QHtPzgf:1tffzi:Ek1bmlxtqKtnabKwkrsWjfBiKNTMv_rR51pNFQhyS88", "expire_date": "2025-02-19T14:03:10.494Z"}}, {"model": "api_room.department", "pk": 1, "fields": {"name": "Pesquisa", "code": "P01", "coordinators": [1]}}, {"model": "api_room.room", "pk": 1, "fields": {"code": "LAB01", "name": "Latin", "departament": 1, "admin": [1], "users": [1]}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": ["admin", "logentry"], "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": ["admin", "logentry"], "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": ["admin", "logentry"], "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": ["admin", "logentry"], "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": ["auth", "permission"], "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": ["auth", "permission"], "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": ["auth", "permission"], "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": ["auth", "permission"], "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": ["auth", "group"], "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": ["auth", "group"], "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": ["auth", "group"], "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": ["auth", "group"], "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": ["auth", "user"], "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": ["auth", "user"], "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": ["auth", "user"], "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": ["auth", "user"], "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": ["contenttypes", "contenttype"], "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": ["contenttypes", "contenttype"], "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": ["contenttypes", "contenttype"], "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": ["contenttypes", "contenttype"], "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": ["sessions", "session"], "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": ["sessions", "session"], "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": ["sessions", "session"], "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": ["sessions", "session"], "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add log", "content_type": ["api_control", "log"], "codename": "add_log"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change log", "content_type": ["api_control", "log"], "codename": "change_log"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete log", "content_type": ["api_control", "log"], "codename": "delete_log"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view log", "content_type": ["api_control", "log"], "codename": "view_log"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add room", "content_type": ["api_room", "room"], "codename": "add_room"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change room", "content_type": ["api_room", "room"], "codename": "change_room"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete room", "content_type": ["api_room", "room"], "codename": "delete_room"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view room", "content_type": ["api_room", "room"], "codename": "view_room"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add iot object", "content_type": ["api_room", "iotobject"], "codename": "add_iotobject"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change iot object", "content_type": ["api_room", "iotobject"], "codename": "change_iotobject"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete iot object", "content_type": ["api_room", "iotobject"], "codename": "delete_iotobject"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view iot object", "content_type": ["api_room", "iotobject"], "codename": "view_iotobject"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add department", "content_type": ["api_room", "department"], "codename": "add_department"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change department", "content_type": ["api_room", "department"], "codename": "change_department"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete department", "content_type": ["api_room", "department"], "codename": "delete_department"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view department", "content_type": ["api_room", "department"], "codename": "view_department"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add actor user", "content_type": ["api_permission", "actoruser"], "codename": "add_actoruser"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change actor user", "content_type": ["api_permission", "actoruser"], "codename": "change_actoruser"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete actor user", "content_type": ["api_permission", "actoruser"], "codename": "delete_actoruser"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view actor user", "content_type": ["api_permission", "actoruser"], "codename": "view_actoruser"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add admin", "content_type": ["api_permission", "admin"], "codename": "add_admin"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change admin", "content_type": ["api_permission", "admin"], "codename": "change_admin"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete admin", "content_type": ["api_permission", "admin"], "codename": "delete_admin"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view admin", "content_type": ["api_permission", "admin"], "codename": "view_admin"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add common", "content_type": ["api_permission", "common"], "codename": "add_common"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change common", "content_type": ["api_permission", "common"], "codename": "change_common"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete common", "content_type": ["api_permission", "common"], "codename": "delete_common"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view common", "content_type": ["api_permission", "common"], "codename": "view_common"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add coordinator", "content_type": ["api_permission", "coordinator"], "codename": "add_coordinator"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change coordinator", "content_type": ["api_permission", "coordinator"], "codename": "change_coordinator"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete coordinator", "content_type": ["api_permission", "coordinator"], "codename": "delete_coordinator"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view coordinator", "content_type": ["api_permission", "coordinator"], "codename": "view_coordinator"}}, {"model": "auth.permission", "pk": 57, "fields": {"name": "Can add service", "content_type": ["api_permission", "service"], "codename": "add_service"}}, {"model": "auth.permission", "pk": 58, "fields": {"name": "Can change service", "content_type": ["api_permission", "service"], "codename": "change_service"}}, {"model": "auth.permission", "pk": 59, "fields": {"name": "Can delete service", "content_type": ["api_permission", "service"], "codename": "delete_service"}}, {"model": "auth.permission", "pk": 60, "fields": {"name": "Can view service", "content_type": ["api_permission", "service"], "codename": "view_service"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$870000$PSUevIhjqEE9ypqRStSChZ$L8/Kx/cnizwUWpcKG1EAPe3XHnvt52H255IjEyKSubQ=", "last_login": "2025-02-05T14:03:10.491Z", "is_superuser": true, "username": "rarvs", "first_name": "", "last_name": "", "email": "rafael.rarvs@gmail.com", "is_staff": true, "is_active": true, "date_joined": "2025-02-05T14:02:49.628Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$870000$42SRixnJfIF1R3XwCW5Jdg$YxdkP4q/Cib9SxoNSxzRHKGmLXIDoTl4eM0WK3wQUDs=", "last_login": null, "is_superuser": false, "username": "Aluno", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-05T14:04:29.427Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$870000$qY97D6vdCxafoM9cAjXd2E$09HXlLBHc36hMO55tX4YWnGixTYTAVkQuTsRHbv3CAI=", "last_login": null, "is_superuser": false, "username": "Servidor", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-05T14:04:47.718Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 4, "fields": {"password": "pbkdf2_sha256$870000$y4yaWR1kDsRbdPNPuLS7KK$9w1kPoGQCO95H9A/UcCnKoKVd8wxk/1MdUswev+POrc=", "last_login": null, "is_superuser": false, "username": "Coordenador", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-05T14:05:05.475Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 5, "fields": {"password": "pbkdf2_sha256$870000$O7nBVQrGfE66IdWIkJ1bhe$tX747A0LF8iD7n150YJZqj8jUQTVuBRqRHf0ue6iEmA=", "last_login": null, "is_superuser": false, "username": "Admin", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-05T14:05:23.491Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 6, "fields": {"password": "pbkdf2_sha256$870000$c6KCnv1SRH9FnigW0Rnf2s$3CZt8Rwx2vXMN1E6K+p5OLYY09YsrshfOuVjtm/N8gM=", "last_login": null, "is_superuser": false, "username": "Teta", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-02-05T15:00:48.031Z", "groups": [], "user_permissions": []}}, {"model": "api_permission.coordinator", "pk": 1, "fields": {"user": ["Coordenador"]}}, {"model": "api_permission.common", "pk": 1, "fields": {"user": ["Aluno"]}}, {"model": "api_permission.service", "pk": 1, "fields": {"user": ["Servidor"]}}, {"model": "api_permission.admin", "pk": 1, "fields": {"user": ["Admin"]}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2025-02-05T14:04:29.793Z", "user": ["rarvs"], "content_type": ["auth", "user"], "object_id": "2", "object_repr": "Aluno", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2025-02-05T14:04:48.094Z", "user": ["rarvs"], "content_type": ["auth", "user"], "object_id": "3", "object_repr": "Servidor", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2025-02-05T14:05:05.856Z", "user": ["rarvs"], "content_type": ["auth", "user"], "object_id": "4", "object_repr": "Coordenador", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2025-02-05T14:05:23.870Z", "user": ["rarvs"], "content_type": ["auth", "user"], "object_id": "5", "object_repr": "Admin", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2025-02-05T14:05:34.868Z", "user": ["rarvs"], "content_type": ["api_permission", "admin"], "object_id": "1", "object_repr": "Admin object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2025-02-05T14:05:39.166Z", "user": ["rarvs"], "content_type": ["api_permission", "common"], "object_id": "1", "object_repr": "Common object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2025-02-05T14:05:44.164Z", "user": ["rarvs"], "content_type": ["api_permission", "coordinator"], "object_id": "1", "object_repr": "Coordinator object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2025-02-05T14:05:48.720Z", "user": ["rarvs"], "content_type": ["api_permission", "service"], "object_id": "1", "object_repr": "Service object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2025-02-05T14:06:05.015Z", "user": ["rarvs"], "content_type": ["api_room", "department"], "object_id": "1", "object_repr": "Department object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2025-02-05T14:06:22.080Z", "user": ["rarvs"], "content_type": ["api_room", "room"], "object_id": "1", "object_repr": "Room object (1)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}]
+[
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "api_control",
+            "model": "log"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "api_room",
+            "model": "room"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "api_room",
+            "model": "iotobject"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "api_room",
+            "model": "department"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "api_permission",
+            "model": "actoruser"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "api_permission",
+            "model": "admin"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "api_permission",
+            "model": "common"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "api_permission",
+            "model": "coordinator"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 15,
+        "fields": {
+            "app_label": "api_permission",
+            "model": "service"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "lvej53bkab43yz36fxveevq56loodon4",
+        "fields": {
+            "session_data": ".eJxVjMsOwiAQRf-FtSFDeZS6dO83kGEYpGogKe3K-O_apAvd3nPOfYmA21rC1nkJcxJnocTpd4tID647SHestyap1XWZo9wVedAury3x83K4fwcFe_nWmJPG7LMyFvVkcNJGe0eeYaABPCjIjAY8qQw5kgaOJtJIHJ11ozXi_QHtPzgf:1tffzi:Ek1bmlxtqKtnabKwkrsWjfBiKNTMv_rR51pNFQhyS88",
+            "expire_date": "2025-02-19T14:03:10.494Z"
+        }
+    },
+    {
+        "model": "api_room.department",
+        "pk": 1,
+        "fields": {
+            "name": "Pesquisa",
+            "code": "P01",
+            "coordinators": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "api_room.room",
+        "pk": 1,
+        "fields": {
+            "code": "LAB01",
+            "name": "Latin",
+            "departament": 1,
+            "admin": [
+                1
+            ],
+            "users": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add log",
+            "content_type": [
+                "api_control",
+                "log"
+            ],
+            "codename": "add_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change log",
+            "content_type": [
+                "api_control",
+                "log"
+            ],
+            "codename": "change_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete log",
+            "content_type": [
+                "api_control",
+                "log"
+            ],
+            "codename": "delete_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view log",
+            "content_type": [
+                "api_control",
+                "log"
+            ],
+            "codename": "view_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add room",
+            "content_type": [
+                "api_room",
+                "room"
+            ],
+            "codename": "add_room"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change room",
+            "content_type": [
+                "api_room",
+                "room"
+            ],
+            "codename": "change_room"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete room",
+            "content_type": [
+                "api_room",
+                "room"
+            ],
+            "codename": "delete_room"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view room",
+            "content_type": [
+                "api_room",
+                "room"
+            ],
+            "codename": "view_room"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add iot object",
+            "content_type": [
+                "api_room",
+                "iotobject"
+            ],
+            "codename": "add_iotobject"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change iot object",
+            "content_type": [
+                "api_room",
+                "iotobject"
+            ],
+            "codename": "change_iotobject"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete iot object",
+            "content_type": [
+                "api_room",
+                "iotobject"
+            ],
+            "codename": "delete_iotobject"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view iot object",
+            "content_type": [
+                "api_room",
+                "iotobject"
+            ],
+            "codename": "view_iotobject"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add department",
+            "content_type": [
+                "api_room",
+                "department"
+            ],
+            "codename": "add_department"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change department",
+            "content_type": [
+                "api_room",
+                "department"
+            ],
+            "codename": "change_department"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete department",
+            "content_type": [
+                "api_room",
+                "department"
+            ],
+            "codename": "delete_department"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view department",
+            "content_type": [
+                "api_room",
+                "department"
+            ],
+            "codename": "view_department"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add actor user",
+            "content_type": [
+                "api_permission",
+                "actoruser"
+            ],
+            "codename": "add_actoruser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change actor user",
+            "content_type": [
+                "api_permission",
+                "actoruser"
+            ],
+            "codename": "change_actoruser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete actor user",
+            "content_type": [
+                "api_permission",
+                "actoruser"
+            ],
+            "codename": "delete_actoruser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view actor user",
+            "content_type": [
+                "api_permission",
+                "actoruser"
+            ],
+            "codename": "view_actoruser"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add admin",
+            "content_type": [
+                "api_permission",
+                "admin"
+            ],
+            "codename": "add_admin"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change admin",
+            "content_type": [
+                "api_permission",
+                "admin"
+            ],
+            "codename": "change_admin"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete admin",
+            "content_type": [
+                "api_permission",
+                "admin"
+            ],
+            "codename": "delete_admin"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view admin",
+            "content_type": [
+                "api_permission",
+                "admin"
+            ],
+            "codename": "view_admin"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add common",
+            "content_type": [
+                "api_permission",
+                "common"
+            ],
+            "codename": "add_common"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change common",
+            "content_type": [
+                "api_permission",
+                "common"
+            ],
+            "codename": "change_common"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete common",
+            "content_type": [
+                "api_permission",
+                "common"
+            ],
+            "codename": "delete_common"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view common",
+            "content_type": [
+                "api_permission",
+                "common"
+            ],
+            "codename": "view_common"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add coordinator",
+            "content_type": [
+                "api_permission",
+                "coordinator"
+            ],
+            "codename": "add_coordinator"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change coordinator",
+            "content_type": [
+                "api_permission",
+                "coordinator"
+            ],
+            "codename": "change_coordinator"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete coordinator",
+            "content_type": [
+                "api_permission",
+                "coordinator"
+            ],
+            "codename": "delete_coordinator"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view coordinator",
+            "content_type": [
+                "api_permission",
+                "coordinator"
+            ],
+            "codename": "view_coordinator"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add service",
+            "content_type": [
+                "api_permission",
+                "service"
+            ],
+            "codename": "add_service"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change service",
+            "content_type": [
+                "api_permission",
+                "service"
+            ],
+            "codename": "change_service"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete service",
+            "content_type": [
+                "api_permission",
+                "service"
+            ],
+            "codename": "delete_service"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view service",
+            "content_type": [
+                "api_permission",
+                "service"
+            ],
+            "codename": "view_service"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$PSUevIhjqEE9ypqRStSChZ$L8/Kx/cnizwUWpcKG1EAPe3XHnvt52H255IjEyKSubQ=",
+            "last_login": "2025-02-05T14:03:10.491Z",
+            "is_superuser": true,
+            "username": "rarvs",
+            "first_name": "",
+            "last_name": "",
+            "email": "rafael.rarvs@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2025-02-05T14:02:49.628Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$42SRixnJfIF1R3XwCW5Jdg$YxdkP4q/Cib9SxoNSxzRHKGmLXIDoTl4eM0WK3wQUDs=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Aluno",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-02-05T14:04:29.427Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$qY97D6vdCxafoM9cAjXd2E$09HXlLBHc36hMO55tX4YWnGixTYTAVkQuTsRHbv3CAI=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Servidor",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-02-05T14:04:47.718Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$y4yaWR1kDsRbdPNPuLS7KK$9w1kPoGQCO95H9A/UcCnKoKVd8wxk/1MdUswev+POrc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Coordenador",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-02-05T14:05:05.475Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$O7nBVQrGfE66IdWIkJ1bhe$tX747A0LF8iD7n150YJZqj8jUQTVuBRqRHf0ue6iEmA=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-02-05T14:05:23.491Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$c6KCnv1SRH9FnigW0Rnf2s$3CZt8Rwx2vXMN1E6K+p5OLYY09YsrshfOuVjtm/N8gM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Teta",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2025-02-05T15:00:48.031Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api_permission.coordinator",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "Coordenador"
+            ]
+        }
+    },
+    {
+        "model": "api_permission.common",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "Aluno"
+            ]
+        }
+    },
+    {
+        "model": "api_permission.service",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "Servidor"
+            ]
+        }
+    },
+    {
+        "model": "api_permission.admin",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "Admin"
+            ]
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2025-02-05T14:04:29.793Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "object_id": "2",
+            "object_repr": "Aluno",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2025-02-05T14:04:48.094Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "object_id": "3",
+            "object_repr": "Servidor",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2025-02-05T14:05:05.856Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "object_id": "4",
+            "object_repr": "Coordenador",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2025-02-05T14:05:23.870Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "object_id": "5",
+            "object_repr": "Admin",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2025-02-05T14:05:34.868Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_permission",
+                "admin"
+            ],
+            "object_id": "1",
+            "object_repr": "Admin object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2025-02-05T14:05:39.166Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_permission",
+                "common"
+            ],
+            "object_id": "1",
+            "object_repr": "Common object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2025-02-05T14:05:44.164Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_permission",
+                "coordinator"
+            ],
+            "object_id": "1",
+            "object_repr": "Coordinator object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2025-02-05T14:05:48.720Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_permission",
+                "service"
+            ],
+            "object_id": "1",
+            "object_repr": "Service object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2025-02-05T14:06:05.015Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_room",
+                "department"
+            ],
+            "object_id": "1",
+            "object_repr": "Department object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2025-02-05T14:06:22.080Z",
+            "user": [
+                "rarvs"
+            ],
+            "content_type": [
+                "api_room",
+                "room"
+            ],
+            "object_id": "1",
+            "object_repr": "Room object (1)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    }
+]

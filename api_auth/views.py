@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, Permission
 from .serializer import UserRegistrationSerializer, UserSerializer
 
 from rest_framework import status
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
@@ -87,6 +87,7 @@ class CustomTokenRefreshView(TokenRefreshView):
 # Create your views here.
 @api_view(['POST'])
 @permission_classes([AllowAny])
+@authentication_classes([])
 def register(request):
     serializer = UserRegistrationSerializer(data=request.data)
     if serializer.is_valid():
@@ -115,7 +116,6 @@ def is_authenticated(request):
     return Response({
         'authenticated':True,
         'ra':request.user.get_username(), 
-        'permissions':request.user.permissions(),
         'email':request.user.email, 
         'fullname':request.user.get_full_name(),
         'first_name':request.user.get_short_name(),
