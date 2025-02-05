@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Coordinator, Admin, Common
+from .models import Coordinator, Admin, Common, ActorUser, Service
 
 class ActorUserSerializer(serializers.ModelSerializer):
     class Meta:

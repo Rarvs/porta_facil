@@ -6,14 +6,14 @@ from django.contrib.auth.models import User
 class Department(models.Model):
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=20, unique=True)
-    coordinators = models.ManyToManyField(Coordinator)
+    coordinators = models.ManyToManyField(Coordinator, related_name='departments', null=True, blank=True)
 
 class Room(models.Model):
     code = models.CharField(max_length=20, unique=True)
     name = models.CharField(max_length=100)
     departament = models.ForeignKey(Department, on_delete=models.CASCADE)
-    admin = models.ManyToManyField(Admin)
-    users = models.ManyToManyField(Common)
+    admin = models.ManyToManyField(Admin, related_name='rooms', null=True, blank=True)
+    users = models.ManyToManyField(Common, related_name='rooms', null=True, blank=True)
     
 class IOTObject(models.Model):
     mac = models.CharField(max_length=100, unique=True)

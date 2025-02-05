@@ -25,8 +25,24 @@ SECRET_KEY = 'django-insecure-sq2cu=cns#0eridpzj2=-a)@r3x8j8qu*!)9(ig0%eubixj+8v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+]
 
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -62,8 +78,15 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+        'api_auth.authentication.CookiesJWTAuthentication',
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    # 'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
+    'DATETIME_FORMAT': "%d/%m/%Y",
+    'DATETIME_INPUT_FORMATS': ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%d"]
 }
 
 ROOT_URLCONF = 'porta_facil.urls'
