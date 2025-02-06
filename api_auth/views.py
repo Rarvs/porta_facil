@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Permission
 
-from .serializer import UserRegistrationSerializer, UserSerializer
+from .serializers import UserRegistrationSerializer, UserSerializer
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
