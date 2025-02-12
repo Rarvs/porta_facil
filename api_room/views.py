@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 # Create your views here.
 class ListRoomAPIView(generics.ListAPIView):
     queryset = Room.objects.all()
-    serializer_class = RoomSimpleSerializerWithAdmin
+    serializer_class = RoomSerializer
     permission_classes = [AllowAny]
 
 class ListObjectAPIView(generics.ListAPIView):

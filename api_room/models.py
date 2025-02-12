@@ -21,4 +21,8 @@ class Room(models.Model):
 class IOTObject(models.Model):
     status = models.CharField(max_length=50, blank=True, default="Esperando")
     mac = models.CharField(max_length=100, unique=True)
-    room = models.ForeignKey(Room, on_delete=models.RESTRICT)
+    description = models.CharField(max_length=100, default="Porta")
+    room = models.ForeignKey(Room, related_name='iotobjects', on_delete=models.RESTRICT)
+
+    def __str__(self):
+        return f'{self.mac} - {self.status}'
