@@ -9,3 +9,6 @@ class Log(models.Model):
     command = models.CharField(max_length=50)
     user = models.OneToOneField(User, on_delete=models.RESTRICT)
     date = models.DateField()
+
+    def __str__(self):
+        return f'{self.iotObject} - {self.command} - {self.user} - {self.date}'
