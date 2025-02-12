@@ -19,5 +19,6 @@ class Room(models.Model):
         return f'{self.code} - {self.name}'
     
 class IOTObject(models.Model):
+    status = models.CharField(max_length=50, blank=True, default="Esperando")
     mac = models.CharField(max_length=100, unique=True)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.RESTRICT)
