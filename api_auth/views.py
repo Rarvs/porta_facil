@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Permission
 
-from .serializer import UserRegistrationSerializer, UserSerializer
+from .serializer import UserRegistrationSerializer, UserSerializer, ServiceRegistrationSerializer
 
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -90,6 +90,18 @@ class CustomTokenRefreshView(TokenRefreshView):
 @authentication_classes([])
 def register(request):
     serializer = UserRegistrationSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    print(serializer.errors)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def registerService(request):
+    serializer = ServiceRegistrationSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)

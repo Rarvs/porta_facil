@@ -14,6 +14,9 @@ class Room(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='rooms')
     admin = models.ManyToManyField(Admin, related_name='rooms', blank=True)
     users = models.ManyToManyField(Common, related_name='rooms', blank=True)
+
+    def __str__(self):
+        return f'{self.code} - {self.name}'
     
 class IOTObject(models.Model):
     mac = models.CharField(max_length=100, unique=True)
