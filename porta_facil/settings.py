@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'api_control',
     'api_room',
     'api_permission',
+    'api_suap',
 ]
 
 MIDDLEWARE = [
