@@ -34,7 +34,10 @@ class ListRoomWithAccessAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        return Room.objects.filter(admin__user=user) | Room.objects.filter(users__user=user)
+        # if Coordinator.objects.filter(user=user):
+        #    return Room.objects.filter(department__coordinators__user=user)
+        
+        return Room.objects.filter(admin__user=user) | Room.objects.filter(users__user=user) | Room.objects.filter(department__coordinators__user=user)
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset().distinct()
