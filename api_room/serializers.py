@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Department, Room, IOTObject
 from api_permission.serializers import *
 from api_permission.models import *
+from api_control.serializers import *
 
 class DepartmentSerializer(serializers.ModelSerializer):
     coordinators = CoordinatorSerializer(many=True, read_only=True)
@@ -18,10 +19,11 @@ class DepartmentSerializer(serializers.ModelSerializer):
 
 class IOTObjectSerializer(serializers.ModelSerializer):
     # room = RoomSerializerSimple(read_only=True)
+    log = LogSerializer(many=True, read_only=True)
 
     class Meta:
         model = IOTObject
-        fields = ['id', 'mac', 'status', 'description']
+        fields = ['id', 'mac', 'status', 'description', 'log']
 
 
 class RoomSerializer(serializers.ModelSerializer):
