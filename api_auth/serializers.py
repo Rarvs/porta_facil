@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from api_permission.models import Common
+from api_permission.models import Common, Service
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -17,6 +17,23 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         
         Common.objects.create(user=user)
         return user
+
+class ServiceRegistrationSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    class Meta:
+        model=User
+        fields=['username', 'password']
+
+    def create(self, validated_data):
+        user = User(
+            username = validated_data['username'],
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        
+        Service.objects.create(user=user)
+        return user
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
