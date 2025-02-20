@@ -28,4 +28,4 @@ class IOTObject(models.Model):
     room = models.ForeignKey(Room, related_name='iotobjects', on_delete=models.RESTRICT)
 
     def __str__(self):
-        return f'{self.mac} - {self.status}'
+        return f'{self.mac} - {self.description}'

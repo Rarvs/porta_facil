@@ -14,15 +14,15 @@ from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 class ListRoomAPIView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
 class ListObjectAPIView(generics.ListAPIView):
     queryset = IOTObject.objects.all()
     serializer_class = IOTObjectSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
 class RoomRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = []
+    permission_classes = [IsAuthenticated]
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
     lookup_url_kwarg = 'id'
