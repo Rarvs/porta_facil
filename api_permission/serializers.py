@@ -39,3 +39,10 @@ class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
         fields = ['id', 'user']
+
+class SecuritySerializer(serializer.ModelSerializer):
+    user = serializers.CharField(source='user.username', read_only=True)
+
+    class Meta:
+        model = Security
+        fields = ['id', 'user']

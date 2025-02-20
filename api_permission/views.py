@@ -16,10 +16,10 @@ class CoordinatorListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = CoordinatorSerializer
 
 
-def set_user_as_coordinator_view(request):
-    user = request.user
-    Coordinator.objects.create(user=user)
+# def set_user_as_coordinator_view(request):
+#     user = request.user
+#     Coordinator.objects.create(user=user)
 
-def remove_user_from_coordinator_view(request):
-    user = request.user
-    Coordinator.objects.filter(Q(user==user)).delete()
+# def remove_user_from_coordinator_view(request):
+#     user = request.user
+#     Coordinator.objects.filter(Q(user==user)).delete()

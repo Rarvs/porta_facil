@@ -12,3 +12,7 @@ class IsAdmin(BasePermission):
 class IsService(BasePermission):
     def has_permission(self, request, view):
         return request.user.is_authenticated and Service.objects.filter(user=request.user).exists()
+
+class IsSecurity(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and Service.objects.filter(user=request.user).exists()

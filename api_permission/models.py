@@ -35,3 +35,9 @@ class Admin(models.Model):
 
     def __str__(self):
         return f'Administrador - {self.user.username}'
+
+class Security(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Segurança - {self.user.username}'
