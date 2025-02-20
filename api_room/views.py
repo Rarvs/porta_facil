@@ -14,7 +14,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 class ListRoomAPIView(generics.ListAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsSecurity]
 
 class ListObjectAPIView(generics.ListAPIView):
     queryset = IOTObject.objects.all()

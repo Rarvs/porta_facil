@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Coordinator, Admin, Common, ActorUser, Service
+from .models import Coordinator, Admin, Common, ActorUser, Service, Security
 
 class ActorUserSerializer(serializers.ModelSerializer):
     user = serializers.CharField(source='user.username', read_only=True)
@@ -40,7 +40,7 @@ class ServiceSerializer(serializers.ModelSerializer):
         model = Service
         fields = ['id', 'user']
 
-class SecuritySerializer(serializer.ModelSerializer):
+class SecuritySerializer(serializers.ModelSerializer):
     user = serializers.CharField(source='user.username', read_only=True)
 
     class Meta:
