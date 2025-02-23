@@ -199,21 +199,25 @@ MIDDLEWARE = [
 LOG_DIR = os.path.join(BASE_DIR, "logs")
 os.makedirs(LOG_DIR, exist_ok=True)  # Cria o diretório se não existir
 
-LOGGING = {
+LOGGING = LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(LOG_DIR, 'activity.log'),
-            'formatter': 'verbose',
-        },
-    },
     'formatters': {
         'verbose': {
             'format': '{levelname} {asctime} {module} {message}',
             'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/portas.log'),  # Define o caminho do arquivo de log
+            'formatter': 'verbose',
         },
     },
     'loggers': {
