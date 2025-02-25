@@ -86,8 +86,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-    # 'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
-    'DATETIME_FORMAT': "%d/%m/%Y",
+    'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
+    # 'DATETIME_FORMAT': "%d/%m/%Y",
     'DATETIME_INPUT_FORMATS': ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%d"]
 }
 

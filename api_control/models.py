@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 class Log(models.Model):
     iotObject = models.ForeignKey(IOTObject, on_delete = models.RESTRICT, related_name='log')
     command = models.CharField(max_length=50)
-    user = models.OneToOneField(User, on_delete=models.RESTRICT)
-    date = models.DateField()
+    user = models.ForeignKey(User, on_delete=models.RESTRICT)
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.iotObject} - {self.command} - {self.user} - {self.date}'
+        return f'{self.date}: {self.user} - {self.command} - {self.iotObject} - {self.iotObject.room.code}'

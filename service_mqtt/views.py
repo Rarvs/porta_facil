@@ -1,7 +1,10 @@
 from django.http import JsonResponse
-from mqtt_client_handler import get_mqtt_client
+from .mqtt_client_handler import get_mqtt_client
 
 mqtt_client = get_mqtt_client()
+
+def teste(objects, command):
+    print(objects, command)
 
 # View para abrir a porta
 def abrir_porta_view(request):
