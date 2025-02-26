@@ -37,11 +37,21 @@ class RoomSerializer(serializers.ModelSerializer):
         model = Room
         fields = ['id', 'code', 'name', 'department', 'admin', 'users', 'iotobjects']
 
-
-class RoomSimpleSerializerWithAdmin(serializers.ModelSerializer):
+class RoomSerializerWithAccess(serializers.ModelSerializer):
     department = DepartmentSerializer(read_only=True)
     admin = AdminSerializer(many=True, read_only=True)
+    iotobjects = IOTObjectSerializer(many=True, read_only=True)
 
     class Meta:
         model = Room
-        fields = ['id', 'code', 'name', 'department', 'admin']
+        fields = ['id', 'code', 'name', 'department', 'admin', 'iotobjects']
+
+class RoomSerializerWithAdmin(serializers.ModelSerializer):
+    department = DepartmentSerializer(read_only=True)
+    admin = AdminSerializer(many=True, read_only=True)
+    users = CommonSerializer(many=True, read_only=True)
+    iotobjects = IOTObjectSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Room
+        fields = ['id', 'code', 'name', 'department', 'admin', 'iotobjects', 'users']

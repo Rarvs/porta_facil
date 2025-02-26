@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.db.models import Q
 
 from .models import Room, Department, IOTObject
-from .serializers import RoomSerializer, RoomSimpleSerializerWithAdmin, DepartmentSerializer, IOTObjectSerializer
+from .serializers import RoomSerializer, RoomSerializerWithAdmin, DepartmentSerializer, IOTObjectSerializer, RoomSerializerWithAccess
 from api_permission.permissions import *
 
 from rest_framework.response import Response
@@ -30,12 +30,15 @@ class RoomRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 class ListRoomWithAccessAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
-    serializer_class = RoomSimpleSerializerWithAdmin
+
+    def get_serializer_class(self):
+        if Coordinator.objects.filter(user=self.request.user):
+            return RoomSerializerWithAdmin
+        else:
+            return RoomSerializerWithAccess
 
     def get_queryset(self):
         user = self.request.user
-        # if Coordinator.objects.filter(user=user):
-        #    return Room.objects.filter(department__coordinators__user=user)
         
         return Room.objects.filter(admin__user=user) | Room.objects.filter(users__user=user) | Room.objects.filter(department__coordinators__user=user)
 
