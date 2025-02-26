@@ -32,11 +32,8 @@ class CommandView(APIView):
         except Room.DoesNotExist:
             return Response({'result':'Sala não existe'}, status=status.HTTP_404_NOT_FOUND)
 
-
-        # print (room.users.filter(id=user.id) or room.admin.filter(id=user.id))
-
-        # if not room.users.filter(id=user.id).exists():
-        #     return Response({'result':'Usuário não possui acesso a esta sala'}, status=status.HTTP_403_FORBIDDEN)
+        if not room.users.filter(user__id=user.id) and not room.admin.filter(user__id=user.id) and not room.department.coordinators.filter(user__id=user.id):
+            return Response({'result': 'Usuário não possui acesso a esta sala'}, status=status.HTTP_403_FORBIDDEN)
     
         try:
 

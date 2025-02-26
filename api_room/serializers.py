@@ -11,14 +11,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
         model = Department
         fields = ['id', 'name', 'code', 'coordinators']
 
-# class RoomSerializerSimple(serializers.ModelSerializer):
-
-#     class Meta:
-#         model = Room
-#         fields = ['id', 'code', 'name']
-
 class IOTObjectSerializer(serializers.ModelSerializer):
-    # room = RoomSerializerSimple(read_only=True)
     log = LogSerializer(many=True, read_only=True)
 
     class Meta:
@@ -30,7 +23,6 @@ class RoomSerializer(serializers.ModelSerializer):
     department = DepartmentSerializer(read_only=True)
     admin = AdminSerializer(many=True, read_only=True)
     users = CommonSerializer(many=True, read_only=True)
-    # iotobjects = IOTObject.objects.prefetch_related('rooms')
     iotobjects = IOTObjectSerializer(many=True, read_only=True)
 
     class Meta:
