@@ -10,7 +10,6 @@ from api_room.serializers import (
     IOTObjectSerializer,
 )
 
-
 class RoomTests(APITestCase):
     def setUp(self):
         self.client = APIClient()
