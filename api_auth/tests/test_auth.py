@@ -58,4 +58,4 @@ class AuthenticationTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertNotIn("token", response.data)
 
-#python manage.py test
+#python manage.py test_auth.py
