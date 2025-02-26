@@ -32,7 +32,7 @@ class ListRoomWithAccessAPIView(generics.ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_serializer_class(self):
-        if Coordinator.objects.filter(user=self.request.user):
+        if Coordinator.objects.filter(user=self.request.user) or Admin.objects.filter(user=self.request.user):
             return RoomSerializerWithAdmin
         else:
             return RoomSerializerWithAccess
