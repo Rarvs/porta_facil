@@ -1,6 +1,6 @@
 # mqtt_client_handler.py
 import threading
-from mqtt_client import MQTTClient
+from .mqtt_client import MQTTClient
 
 # Instancia o cliente MQTT
 mqtt_client_instance = MQTTClient()

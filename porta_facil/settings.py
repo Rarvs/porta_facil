@@ -81,13 +81,13 @@ MIDDLEWARE = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'api_auth.authentication.CookiesJWTAuthentication',
-        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-    # 'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
-    'DATETIME_FORMAT': "%d/%m/%Y",
+    'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
+    # 'DATETIME_FORMAT': "%d/%m/%Y",
     'DATETIME_INPUT_FORMATS': ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f", "%Y-%m-%d"]
 }
 
