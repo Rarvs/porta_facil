@@ -7,6 +7,9 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import Log
 
+import requests
+import json
+
 from api_room.models import *
 from service_mqtt import views as mqtt
 
@@ -30,13 +33,33 @@ class CommandView(APIView):
             return Response({'result':'Sala não existe'}, status=status.HTTP_404_NOT_FOUND)
 
 
-        if not room.users.filter(id=user.id).exists():
-            return Response({'result':'Usuário não possui acesso a esta sala'}, status=status.HTTP_403_FORBIDDEN)
+        # print (room.users.filter(id=user.id) or room.admin.filter(id=user.id))
+
+        # if not room.users.filter(id=user.id).exists():
+        #     return Response({'result':'Usuário não possui acesso a esta sala'}, status=status.HTTP_403_FORBIDDEN)
     
         try:
-            mqtt.teste(room, param_command)
+
+            headers = {
+                "Content-Type": "application/json"
+            }
+            
             iot = IOTObject.objects.get(mac=param_object)
+
+            if(param_command=='abrir'):               
+                requests.post("http://192.168.159.76:8000/abrir-porta/", headers=headers)
+            elif(param_command=='status'):
+                response = requests.post("http://192.168.159.76:8000/status-porta/", headers=headers)
+                response_data = response.content
+                data = json.loads(response_data.decode())
+                status = data['status']
+                test = str(status)
+                print(status)
+                iot.status = test
+                iot.save()
+            
+            iot.save()
             Log.objects.create(iotObject = iot, command = param_command, user = user)
-            return Response({'result':'Comando executado com sucesso'})
+            return Response({'result':'Comando executado com sucesso', 'status':iot.status})
         except Exception as e:
             return Response({'result':'Não foi possível executar o commando', 'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
